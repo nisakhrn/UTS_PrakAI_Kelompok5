@@ -2,9 +2,18 @@
 # Knowledge Acquisition (Tambah/Edit/Hapus Rule)
 # ==============================================
 
-# Basis Pengetahuan awal 
+# Basis Pengetahuan awal (contoh)
 rules = [
-
+ {
+        "jika": ["ac tidak dingin", "kompresor tidak bunyi"],
+        "maka": "kemungkinan freon habis atau kompresor rusak",
+        "explanation": "Jika AC tidak dingin dan kompresor tidak bunyi, biasanya freon bocor atau kompresor rusak."
+    },
+    {
+        "jika": ["unit indoor bocor air"],
+        "maka": "kemungkinan saluran pembuangan tersumbat",
+        "explanation": "Biasanya air bocor karena saluran pembuangan tersumbat oleh debu atau lendir."
+    }
 ]
 
 
