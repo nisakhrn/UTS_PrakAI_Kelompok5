@@ -25,12 +25,12 @@ Contoh : Diagnosis 'freon habis atau kompresor rusak.' diperoleh karena 'ac tida
 
 # 🚀 Cara Menjalankan Program
 1 – Tanpa Database
-Jalankan knowledge_acquisition.py untuk menambah atau ubah aturan.
-Jalankan explanation_facility.py untuk bertanya “WHY” dan “HOW”.
+- Jalankan knowledge_acquisition.py untuk menambah atau ubah aturan.
+- Jalankan explanation_facility.py untuk bertanya “WHY” dan “HOW”.
 
 2 – Dengan menggunakan Database atau file json internal
-Hubungkan koneksi ke dalam kedua file.
-Jalankan kedua modul — data akan otomatis tersimpan dan bisa digunakan secara bersama.
+- Hubungkan koneksi ke dalam kedua file.
+- Jalankan kedua modul — data akan otomatis tersimpan dan bisa digunakan secara bersama.
 
 # 📚 Kesimpulan
 Sistem pakar diagnosis AC ini terdiri dari dua fitur utama yang saling berkaitan. 
