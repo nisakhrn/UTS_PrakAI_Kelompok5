@@ -1,4 +1,3 @@
-# working_memory.py
 import json
 from datetime import datetime
 
@@ -27,7 +26,7 @@ class WorkingMemory:
         self.reasoning_trace.append(f"[CONCLUSION ADDED] {conclusion['diagnosis']} (CF: {conclusion['confidence']})")
         
     def get_facts(self):
-        """Dapatkan semua fakta sebagai set"""
+        """Dapatkan semua fakta"""
         return self.facts.copy()
         
     def has_fact(self, fact):
@@ -72,3 +71,17 @@ class WorkingMemory:
         print(f"Conclusions: {len(self.conclusions)}")
         print(f"Reasoning Steps: {len(self.reasoning_trace)}")
         print("---" + "-" * (30 + len(self.session_id)))
+
+
+# --- Wrapper (agar kompatibel dengan versi lama) ---
+_default_wm = WorkingMemory()
+
+def add_fact(fact):
+    _default_wm.add_fact(fact)
+
+def get_memory():
+    return list(_default_wm.get_facts())
+
+def reset_memory():
+    _default_wm.facts.clear()
+    _default_wm.reasoning_trace.append("[MEMORY RESET]")
