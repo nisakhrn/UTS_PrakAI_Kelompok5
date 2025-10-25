@@ -3,15 +3,15 @@
     "nama": "Sistem Pakar Diagnosis Kerusakan AC Split Residensial",
     "domain": "Teknik Mesin / HVAC",
     "versi": "1.0",
-    "deskripsi": "Sistem ini membantu diagnosis masalah umum pada AC tipe split residensial."
+    "deskripsi": "Sistem ini membantu diagnosis masalah umum pada AC tipe split residensial"
   },
 
   "gejala": [
-    { "kode": "G01", "deskripsi": "AC tidak menyala sama sekali", "pertanyaan": "Apakah AC tidak menyala sama sekali?", "tipe": "boolean", "excludes": ["G02", "G03", "G04", "G05", "G06", "G08", "G09", "G10", "G11", "G12"] },
-    { "kode": "G02", "deskripsi": "AC menyala tetapi udara tidak dingin", "pertanyaan": "Apakah AC menyala tetapi udara yang keluar tidak dingin?", "tipe": "boolean", "excludes": ["G01"] },
+    { "kode": "G01", "deskripsi": "AC tidak menyala sama sekali", "pertanyaan": "Apakah AC tidak menyala sama sekali?", "tipe": "boolean" },
+    { "kode": "G02", "deskripsi": "AC menyala tetapi udara tidak dingin", "pertanyaan": "Apakah AC menyala tetapi udara yang keluar tidak dingin?", "tipe": "boolean" },
     { "kode": "G03", "deskripsi": "AC dingin tetapi tidak maksimal", "pertanyaan": "Apakah AC terasa dingin tetapi kinerjanya menurun/tidak maksimal?", "tipe": "boolean" },
     { "kode": "G04", "deskripsi": "Unit indoor bocor air", "pertanyaan": "Apakah unit indoor meneteskan atau bocor air ke dalam ruangan?", "tipe": "boolean" },
-    { "kode": "G05", "deskripsi": "Unit outdoor berisik", "pertanyaan": "Apakah unit outdoor mengeluarkan bunyi berisik (berisik, berderak, dll)?", "tipe": "boolean" },
+    { "kode": "G05", "deskripsi": "Unit outdoor berisik", "pertanyaan": "Apakah unit outdoor mengeluarkan bunyi berisik (berisik, berderak, etc)?", "tipe": "boolean" },
     { "kode": "G06", "deskripsi": "Unit indoor berisik", "pertanyaan": "Apakah unit indoor mengeluarkan bunyi berisik?", "tipe": "boolean" },
     { "kode": "G07", "deskripsi": "AC mengeluarkan bau tidak sedap", "pertanyaan": "Apakah AC mengeluarkan bau tidak sedap?", "tipe": "multiple_choice", "opsi": ["tidak ada bau", "bau apek", "bau terbakar", "bau busuk"] },
     { "kode": "G08", "deskripsi": "Kipas unit indoor tidak berputar", "pertanyaan": "Apakah kipas pada unit indoor tidak berputar?", "tipe": "boolean" },
@@ -24,20 +24,20 @@
   ],
 
   "kerusakan": [
-    { "kode": "K01", "nama": "Masalah Kelistrikan", "deskripsi": "MCB trip, tegangan tidak stabil, atau kabel putus.", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan", "excludes": ["K02", "K03", "K04", "K05", "K06", "K07", "K08", "K09", "K10", "K11", "K12", "K13", "K14"] },
-    { "kode": "K02", "nama": "Remote Control Rusak", "deskripsi": "Remote rusak atau baterai lemah.", "tingkat_kesulitan": "mudah", "rekomendasi_teknisi": "tidak perlu", "excludes": ["K01"] },
-    { "kode": "K03", "nama": "Kapasitor Lemah/Rusak", "deskripsi": "Kapasitor kompresor atau kipas lemah/rusak.", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
-    { "kode": "K04", "nama": "Kebocoran Refrigerant", "deskripsi": "Terjadi kebocoran pada pipa atau sambungan refrigerant (freon).", "tingkat_kesulitan": "sulit", "rekomendasi_teknisi": "wajib" },
-    { "kode": "K05", "nama": "Filter Udara Kotor", "deskripsi": "Filter udara tersumbat debu.", "tingkat_kesulitan": "mudah", "rekomendasi_teknisi": "tidak perlu" },
-    { "kode": "K06", "nama": "Evaporator Kotor", "deskripsi": "Evaporator indoor kotor.", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
-    { "kode": "K07", "nama": "Kondensor Kotor", "deskripsi": "Sirip kondensor outdoor kotor.", "tingkat_kesulitan": "mudah", "rekomendasi_teknisi": "tidak perlu" },
-    { "kode": "K08", "nama": "Saluran Drainase Tersumbat", "deskripsi": "Saluran pembuangan air tersumbat.", "tingkat_kesulitan": "mudah", "rekomendasi_teknisi": "tidak perlu" },
-    { "kode": "K09", "nama": "Kipas Rusak", "deskripsi": "Kipas indoor/outdoor rusak secara mekanis.", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
-    { "kode": "K10", "nama": "Kompresor Rusak", "deskripsi": "Kompresor rusak dan tidak dapat bekerja normal.", "tingkat_kesulitan": "sulit", "rekomendasi_teknisi": "wajib" },
-    { "kode": "K11", "nama": "Sensor Suhu Rusak", "deskripsi": "Sensor suhu (thermistor) rusak.", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
-    { "kode": "K12", "nama": "Masalah Pipa Kapiler", "deskripsi": "Penyumbatan atau kerusakan pipa kapiler.", "tingkat_kesulitan": "sulit", "rekomendasi_teknisi": "wajib" },
-    { "kode": "K13", "nama": "Pertumbuhan Jamur/Bakteri", "deskripsi": "Jamur/bakteri tumbuh di evaporator atau filter.", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
-    { "kode": "K14", "nama": "Bearing Motor Aus", "deskripsi": "Bearing motor kipas aus.", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" }
+    { "kode": "K01", "nama": "Masalah Kelistrikan", "deskripsi": "MCB/Pemutus Arus Trip, Tegangan Listrik Tidak Stabil, atau Kabel Putus", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
+    { "kode": "K02", "nama": "Remote Control Rusak", "deskripsi": "Remote Control Rusak atau Baterai Lemah", "tingkat_kesulitan": "mudah", "rekomendasi_teknisi": "tidak perlu" },
+    { "kode": "K03", "nama": "Kapasitor Lemah/Rusak", "deskripsi": "Kapasitor Kompresor atau Kapasitor Kipas Lemah/Rusak", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
+    { "kode": "K04", "nama": "Kebocoran Refrigerant", "deskripsi": "Kebocoran Refrigerant (Freon)", "tingkat_kesulitan": "sulit", "rekomendasi_teknisi": "wajib" },
+    { "kode": "K05", "nama": "Filter Udara Kotor", "deskripsi": "Filter Udara Kotor dan Tersumbat", "tingkat_kesulitan": "mudah", "rekomendasi_teknisi": "tidak perlu" },
+    { "kode": "K06", "nama": "Evaporator Kotor", "deskripsi": "Evaporator (Unit Indoor) Kotor", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
+    { "kode": "K07", "nama": "Kondensor Kotor", "deskripsi": "Kondensor (Unit Outdoor) Kotor", "tingkat_kesulitan": "mudah", "rekomendasi_teknisi": "tidak perlu" },
+    { "kode": "K08", "nama": "Saluran Drainase Tersumbat", "deskripsi": "Saluran Pembuangan Air (Drainage Pipe) Tersumbat", "tingkat_kesulitan": "mudah", "rekomendasi_teknisi": "tidak perlu" },
+    { "kode": "K09", "nama": "Kipas Rusak", "deskripsi": "Kipas Unit Indoor atau Outdoor Rusak secara Mekanis", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
+    { "kode": "K10", "nama": "Kompresor Rusak", "deskripsi": "Kompresor Rusak", "tingkat_kesulitan": "sulit", "rekomendasi_teknisi": "wajib" },
+    { "kode": "K11", "nama": "Sensor Suhu Rusak", "deskripsi": "Sensor Suhu (Thermistor) Rusak", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
+    { "kode": "K12", "nama": "Masalah Pipa Kapiler", "deskripsi": "Masalah pada Pipa Kapiler atau Katup Ekspansi", "tingkat_kesulitan": "sulit", "rekomendasi_teknisi": "wajib" },
+    { "kode": "K13", "nama": "Pertumbuhan Jamur/Bakteri", "deskripsi": "Pertumbuhan Jamur/Bakteri di Evaporator atau Filter", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" },
+    { "kode": "K14", "nama": "Bearing Motor Aus", "deskripsi": "Bearing Motor Kipas Aus", "tingkat_kesulitan": "sedang", "rekomendasi_teknisi": "disarankan" }
   ],
 
   "rules": {
@@ -72,5 +72,42 @@
     "R29": { "IF": ["G03", "G11", "G14"], "THEN": "K05", "CF": 0.8 },
     "R30": { "IF": ["G10", "G02"], "THEN": "K04", "CF": 0.7 },
     "R31": { "IF": ["G04", "G11"], "THEN": "K08", "CF": 0.8 }
+  },
+
+  "solusi": [
+    { "kode_kerusakan": "K01", "langkah_perbaikan": ["Periksa MCB di panel listrik, pastikan dalam posisi ON", "Gunakan multimeter untuk memeriksa tegangan stopkontak", "Periksa kabel power dan sambungan listrik", "Jika tidak paham, hubungi teknisi listrik"], "peringatan": "Hati-hati dengan listrik tegangan tinggi" },
+    { "kode_kerusakan": "K02", "langkah_perbaikan": ["Ganti baterai remote dengan yang baru", "Bersihkan sensor infrared pada remote dan unit indoor", "Test remote dengan kamera ponsel - jika lampu IR tidak terlihat, remote mungkin rusak", "Pertimbangkan untuk membeli remote universal pengganti"], "peringatan": "Tidak ada" },
+    { "kode_kerusakan": "K03", "langkah_perbaikan": ["MATIKAN DAYA SEBELUM MEMPERBAIKI", "Gunakan multimeter untuk mengetes kapasitansi kapasitor", "Beli kapasitor baru dengan spesifikasi yang sama (μF dan Voltage)", "Pasang kapasitor baru dengan memperhatikan polaritas"], "peringatan": "KAPASITOR MENYIMPAN LISTRIK - HATI-HATI SENGATAN LISTRIK" },
+    { "kode_kerusakan": "K04", "langkah_perbaikan": ["Hubungi teknisi HVAC berlisensi", "Teknisi akan menemukan kebocoran menggunakan detector kebocoran", "Perbaiki kebocoran pada sambungan atau komponen", "Lakukan vakum sistem dan isi ulang refrigerant sesuai spesifikasi"], "peringatan": "HARUS DILAKUKAN OLEH TEKNISI BERSERTIFIKAT" },
+    { "kode_kerusakan": "K05", "langkah_perbaikan": ["Buka penutup unit indoor", "Tarik filter udara keluar", "Cuci filter dengan air mengalir dan sabun lembut", "Keringkan filter di tempat teduh", "Pasang kembali filter yang sudah kering"], "peringatan": "Lakukan 2-4 minggu sekali untuk hasil terbaik" },
+    { "kode_kerusakan": "K06", "langkah_perbaikan": ["Matikan AC dan cabut dari listrik", "Semprotkan coil cleaner khusus evaporator", "Biarkan selama 10-15 menit sesuai petunjuk", "Bilas dengan air rendah tekanan", "Keringkan sebelum menyalakan AC kembali"], "peringatan": "Hati-hati dengan sirip evaporator yang mudah bengkok" },
+    { "kode_kerusakan": "K07", "langkah_perbaikan": ["Matikan daya unit outdoor", "Semprot sirip-sirip kondensor dengan air bertekanan sedang", "Gunakan sikat lembut untuk kotoran yang membandel", "Bersihkan area sekitar unit outdoor dari sampah dan daun", "Pastikan sirkulasi udara sekitar unit baik"], "peringatan": "Jangan gunakan tekanan air terlalu tinggi agar sirip tidak bengkok" },
+    { "kode_kerusakan": "K08", "langkah_perbaikan": ["Cari pipa PVC drain (biasanya dekat unit indoor)", "Tiup atau sedot dengan vacuum cleaner", "Semprotkan air bertekanan untuk membersihkan sumbatan", "Beri larutan soda kue + cuka untuk menghilangkan lumut", "Pastikan kemiringan pipa drain cukup untuk aliran air"], "peringatan": "Pastikan ujung pipa drain tidak terendam air" },
+    { "kode_kerusakan": "K09", "langkah_perbaikan": ["Matikan sumber listrik sebelum melakukan pemeriksaan.", "Periksa apakah kipas macet karena debu atau kotoran.", "Bersihkan kipas dan pelindungnya dari debu.", "Periksa motor kipas, jika terbakar atau tidak berputar, ganti dengan yang baru."], "peringatan": "Pastikan kipas tidak terhubung ke listrik saat diperiksa." },
+    { "kode_kerusakan": "K10", "langkah_perbaikan": ["Periksa suplai listrik menuju kompresor.", "Gunakan multimeter untuk memeriksa resistansi coil kompresor.", "Jika kompresor tidak berfungsi dan panas berlebih, segera matikan daya.", "Hubungi teknisi untuk mengganti kompresor yang rusak."], "peringatan": "Kompresor bekerja dengan tekanan tinggi – hanya teknisi berpengalaman yang boleh menangani." },
+    { "kode_kerusakan": "K11", "langkah_perbaikan": ["Matikan daya dan lepaskan sensor suhu (thermistor).", "Gunakan multimeter untuk memeriksa nilai resistansi sensor.", "Jika nilai tidak sesuai spesifikasi, ganti sensor dengan yang baru.", "Pasang kembali sensor dengan posisi yang tepat di pipa atau evaporator."], "peringatan": "Hindari menarik kabel sensor terlalu kuat karena mudah putus." },
+    { "kode_kerusakan": "K12", "langkah_perbaikan": ["Pastikan sistem dalam keadaan mati.", "Periksa aliran refrigerant di pipa kapiler.", "Jika terjadi penyumbatan, teknisi akan melakukan flushing atau penggantian pipa.", "Isi ulang refrigerant setelah pipa diperbaiki."], "peringatan": "Pekerjaan ini hanya boleh dilakukan oleh teknisi HVAC." },
+    { "kode_kerusakan": "K13", "langkah_perbaikan": ["Matikan AC dan buka penutup unit indoor.", "Semprot evaporator dan filter dengan cairan pembersih anti-bakteri.", "Bersihkan dengan sikat lembut lalu bilas.", "Keringkan dengan udara alami sebelum dipasang kembali."], "peringatan": "Gunakan masker dan sarung tangan saat membersihkan jamur." },
+    { "kode_kerusakan": "K14", "langkah_perbaikan": ["Matikan AC dan lepaskan motor kipas dari unit.", "Putar as motor secara manual untuk mengecek kelancaran.", "Jika terasa seret atau longgar, ganti bearing atau motor kipas.", "Gunakan pelumas khusus bearing jika masih bisa diperbaiki."], "peringatan": "Hindari penggunaan pelumas berlebih agar tidak mencemari motor." }
+  ],
+
+  "saran_umum": {
+    "peringatan_keamanan": [
+      "SELALU matikan sumber listrik sebelum membersihkan atau memeriksa unit",
+      "Jangan pernah mencoba menangani refrigerant sendiri",
+      "Gunakan alat pelindung diri (sarung tangan, sepatu safety) saat bekerja"
+    ],
+    "perawatan_rutin": [
+      "Bersihkan filter udara setiap 2-4 minggu",
+      "Bersihkan unit outdoor setiap 6 bulan",
+      "Lakukan service profesional setahun sekali",
+      "Pastikan area sekitar unit outdoor bersih dan tidak tertutup"
+    ],
+    "tips_efisiensi": [
+      "Atur suhu pada 24-25°C untuk efisiensi optimal",
+      "Tutup jendela dan pintu saat AC menyala",
+      "Gunakan timer untuk menghemat energi",
+      "Pastikan ruangan tertutup rapat"
+    ]
   }
 }
