@@ -8,3 +8,4 @@ def cari_riwayat(kata):
                     hasil.append(line.strip())
     except FileNotFoundError:
         hasil.append("Belum ada riwayat tersimpan.")
+    return hasil
