@@ -1,0 +1,11 @@
+Gejala: ['ac_bocor_air', 'kompresor_tidak_berbunyi', 'ac_tidak_menyala'] -> Hasil: saluran_drainase_tersumbat
+Gejala: ['kompresor_tidak_berbunyi'] -> Hasil: kerusakan_kompresor
+Gejala: ['ac_tidak_dingin', 'evaporator_tersumbat'] -> Hasil: efisiensi_pendinginan_menurun
+Gejala: ['ac_tidak_dingin', 'ac_bocor_air', 'tegangan_listrik_tidak_stabil'] -> Hasil: kerusakan_kompresor
+Gejala: ['ac_tidak_dingin', 'ac_bocor_air', 'tegangan_listrik_tidak_stabil'] -> Hasil: saluran_drainase_tersumbat
+Gejala: ['ac_tidak_dingin', 'ac_tidak_menyala', 'arus_kompresor_tinggi', 'tegangan_abnormal', 'tegangan_listrik_tidak_stabil'] -> Hasil: kerusakan_kapasitor_kompresor
+Gejala: ['ac_tidak_dingin', 'ac_tidak_menyala', 'arus_kompresor_tinggi', 'tegangan_abnormal', 'tegangan_listrik_tidak_stabil'] -> Hasil: kerusakan_kompresor
+Gejala: ['ac_tidak_dingin', 'ac_tidak_menyala', 'arus_kompresor_tinggi', 'tegangan_abnormal', 'tegangan_listrik_tidak_stabil'] -> Hasil: masalah_kelistrikan
+Gejala: ['ac_tidak_dingin', 'ac_tidak_menyala', 'arus_kompresor_tinggi', 'tegangan_abnormal', 'tegangan_listrik_tidak_stabil'] -> Hasil: kerusakan_kapasitor_kompresor
+Gejala: ['ac_tidak_dingin', 'ac_tidak_menyala', 'arus_kompresor_tinggi', 'tegangan_abnormal', 'tegangan_listrik_tidak_stabil'] -> Hasil: kerusakan_kompresor
+Gejala: ['ac_tidak_dingin', 'ac_tidak_menyala', 'arus_kompresor_tinggi', 'tegangan_abnormal', 'tegangan_listrik_tidak_stabil'] -> Hasil: masalah_kelistrikan

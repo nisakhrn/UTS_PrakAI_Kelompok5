@@ -1,4 +1,7 @@
-# certainty_factor.py
+def hitung_cf(cf_rule, cf_user):
+    """Menghitung Certainty Factor gabungan"""
+    return round(cf_rule * cf_user, 2)
+
 
 def calculate_cf(evidence_list, rules):
     """
@@ -15,7 +18,7 @@ def calculate_cf(evidence_list, rules):
         # Cek apakah semua kondisi rule terpenuhi oleh input user
         if all(gejala in evidence_list for gejala in kondisi):
             cf_user = 1.0  # anggap user yakin 100%
-            cf_new = cf_user * cf_rule
+            cf_new = hitung_cf(cf_rule, cf_user)
 
             # Hitung CF gabungan jika kesimpulan sudah ada sebelumnya
             if kesimpulan in cf_result:

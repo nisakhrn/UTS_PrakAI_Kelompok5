@@ -1,436 +1,248 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-* {
-    font-family: 'Poppins', sans-serif;
+/* ============================================================
+   GLOBAL STYLES
+============================================================ */
+body, .stApp {
+    background-color: #f8fafc;
+    font-family: "Poppins", sans-serif;
+    color: #1e293b;
 }
 
-/* Hide Streamlit Branding */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-
-/* Main Container */
-.main {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 0;
+#MainMenu, header, footer {
+    visibility: hidden;
 }
 
-.block-container {
-    padding: 2rem 2rem 3rem 2rem;
-    max-width: 1400px;
-}
-
-/* Animated Header */
-.hero-header {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 30px;
-    margin-bottom: 2rem;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    position: relative;
-    overflow: hidden;
-    animation: fadeInDown 0.8s ease-out;
-}
-
-.hero-header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
-    animation: shine 3s infinite;
-}
-
-@keyframes shine {
-    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-header h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-header p {
-    font-size: 1.3rem;
-    color: #555;
-    margin-top: 0.8rem;
-    font-weight: 400;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 0.4rem 1.2rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-top: 1rem;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-}
-
-/* Glass Cards */
-.glass-card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 25px;
-    padding: 2.5rem;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: fadeIn 0.6s ease-out;
-    color: #333; /* FIX: Set default dark text color for elements inside the card */
-}
-
-/* FIX: Pastikan label widget (Multiselect, Text Input) berwarna gelap */
-.glass-card .stMultiSelect label,
-.glass-card .stTextInput label,
-.glass-card .stDateInput label {
-    color: #333 !important; 
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.glass-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgba(0,0,0,0.15);
-}
-
-/* Premium Buttons */
-.stButton>button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 1rem 2.5rem;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    overflow: hidden;
-}
-
-.stButton>button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.5s;
-}
-
-.stButton>button:hover::before {
-    left: 100%;
-}
-
-.stButton>button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
-}
-
-/* Multiselect Styling */
-.stMultiSelect [data-baseweb="tag"] {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    border-radius: 10px !important;
-    padding: 0.4rem 0.8rem !important;
-    font-weight: 600 !important;
-}
-
-.stMultiSelect [data-baseweb="select"] {
-    border-radius: 15px !important;
-    border: 2px solid #667eea !important;
-}
-
-/* Section Headers */
-.section-header {
-    font-size: 2rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* Info Box */
-.info-box {
-    background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
-    border-left: 5px solid #667eea;
-    border-radius: 15px;
-    padding: 1.5rem;
-    margin: 1rem 0;
-    animation: slideInRight 0.5s ease-out;
-}
-
-/* FIX: Pastikan teks list di dalam info-box terlihat (warna gelap) */
-.info-box ul, .info-box ol, .info-box li {
-    color: #333;
-}
-
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.info-box h4 {
-    color: #667eea;
-    font-weight: 700;
-    margin-bottom: 0.8rem;
-}
-
-/* ADDON: Style untuk kotak "Gejala Terpilih" biar senada */
-.selected-count-box {
-    background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
-    border-left: 5px solid #667eea;
-    border-radius: 15px;
-    padding: 1.2rem;
-    margin: 1rem 0;
-    animation: fadeIn 0.5s; /* Pakai animasi fadeIn yang sudah ada */
-}
-
-.selected-count-box h4 {
-    color: #667eea;
-    font-weight: 700;
-    margin: 0;
-}
-
-
-/* Result Cards */
-.result-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
-    border: 2px solid #667eea;
-    border-radius: 20px;
-    padding: 2rem;
-    margin: 1.5rem 0;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
-    animation: scaleIn 0.5s ease-out;
-    position: relative;
-    overflow: hidden;
-}
-
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.result-card::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 20px;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.result-card:hover::before {
-    opacity: 0.1;
-}
-
-.result-card h3 {
-    color: #667eea;
-    font-weight: 800;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Symptom Pills */
-.symptom-pill {
-    display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 25px;
-    margin: 0.3rem;
-    font-weight: 600;
-    font-size: 0.95rem;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    transition: transform 0.2s;
-}
-
-.symptom-pill:hover {
-    transform: scale(1.05);
-}
-
-/* Metrics */
-[data-testid="stMetricValue"] {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-[data-testid="stMetricLabel"] {
-    font-weight: 600;
-    color: #555;
-}
-
-/* Sidebar */
+/* ============================================================
+   SIDEBAR PERMANEN (FIX TOTAL)
+============================================================ */
 section[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
-    padding: 2rem 1rem;
-}
-
-section[data-testid="stSidebar"] * {
+    background: linear-gradient(180deg, #0047ab 0%, #007bff 100%) !important;
     color: white !important;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 300px !important;
+    min-width: 300px !important;
+    max-width: 300px !important;
+    transform: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: none !important;
+    display: block !important;
+    z-index: 9999 !important;
 }
 
-section[data-testid="stSidebar"] .stRadio label {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 12px;
-    margin: 0.5rem 0;
-    transition: all 0.3s;
-    cursor: pointer;
+/* Geser konten utama ke kanan agar tidak tertimpa sidebar */
+div[data-testid="stAppViewContainer"] {
+    margin-left: 300px !important;
 }
 
-section[data-testid="stSidebar"] .stRadio label:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateX(5px);
+/* Pastikan semua tombol collapse Streamlit mati total */
+div[data-testid="stSidebarCollapseControl"],
+button[data-testid="baseButton-headerNoPadding"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
-/* Expander */
-.streamlit-expanderHeader {
-    background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
-    border-radius: 12px;
-    font-weight: 600;
-    color: #667eea !important;
+/* Nonaktifkan shortcut keyboard collapse (paksa) */
+html, body {
+    overscroll-behavior: none;
+}
+:root {
+    --streamlit-collapse-sidebar-shortcut: none;
 }
 
-/* Success/Warning/Error Messages */
-.element-container .stAlert {
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    animation: slideInLeft 0.5s ease-out;
+/* ============================================================
+   SIDEBAR CONTENT & BUTTON
+============================================================ */
+section[data-testid="stSidebar"] .sidebar-content {
+    padding: 1.5rem !important;
 }
 
-/* FIX: Beri warna teks gelap yang kontras untuk setiap jenis alert */
-.element-container .stAlert[data-testid="stSuccess"] {
-    color: #155724; /* Dark Green */
-}
-.element-container .stAlert[data-testid="stInfo"] {
-    color: #0c5460; /* Dark Blue */
-}
-.element-container .stAlert[data-testid="stWarning"] {
-    color: #856404; /* Dark Yellow/Brown */
-}
-.element-container .stAlert[data-testid="stError"] {
-    color: #721c24; /* Dark Red */
+.sidebar-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
 }
 
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.sidebar-subtitle {
+    font-size: 0.9rem;
+    color: #dbeafe;
+    margin-bottom: 1.5rem;
 }
 
-/* Loading Spinner */
-.stSpinner > div {
-    border-top-color: #667eea !important;
+/* Sidebar Buttons */
+button[kind="primary"],
+button[kind="secondary"] {
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    padding: 0.6rem 1rem !important;
 }
 
-/* Footer */
-.premium-footer {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 30px;
-    margin-top: 3rem;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+button[kind="primary"] {
+    background-color: #007bff !important;
+    color: white !important;
+    border: none !important;
 }
 
-.premium-footer h3 {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
+button[kind="primary"]:hover {
+    background-color: #0056b3 !important;
+}
+
+button[kind="secondary"] {
+    border: 2px solid #e2e8f0 !important;
+    background-color: white !important;
+    color: #1e3a8a !important;
+}
+
+button[kind="secondary"]:hover {
+    background-color: #eff6ff !important;
+    border-color: #60a5fa !important;
+}
+
+/* ============================================================
+   PAGE CONTENT
+============================================================ */
+.page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0047ab;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   RESULT CARD
+============================================================ */
+.result-card {
+    background: white;
+    border-left: 5px solid #007bff;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     margin-bottom: 1rem;
 }
 
-.premium-footer p {
-    color: #666;
-    font-size: 1rem;
+.result-card h4 {
+    color: #0047ab;
+    font-weight: 700;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
+.result-card ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
 }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
+.peringatan {
+    color: #dc2626;
+    margin-top: 0.5rem;
 }
 
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 10px;
+/* ============================================================
+   RULE CARD
+============================================================ */
+.rule-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+.rule-card h4 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   HISTORY CARD
+============================================================ */
+.history-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.1s ease-in-out;
+}
+
+.history-card:hover {
+    transform: scale(1.01);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.tag-container {
+    margin-top: 0.5rem;
+}
+
+.tag {
+    background-color: #e0f2fe;
+    color: #0284c7;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    padding: 0.25rem 0.8rem;
+    margin-right: 0.4rem;
+    display: inline-block;
+    font-weight: 500;
+}
+
+/* ============================================================
+   STAT CARD
+============================================================ */
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.stat-card h2 {
+    font-size: 36px;
+    margin: 0;
+    color: #007bff;
+}
+
+.stat-card p {
+    margin: 0;
+    color: #555;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem !important;
+    }
 }
